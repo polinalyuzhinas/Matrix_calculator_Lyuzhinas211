@@ -80,6 +80,17 @@ namespace MatrixcalculatorLyuzhinas211 {
 	private: System::Windows::Forms::Label^ lblMatrix2;
 	private: System::Windows::Forms::Label^ lblMatrix1;
 	private: System::Windows::Forms::Label^ lblResult;
+	private: System::Windows::Forms::TextBox^ txtMultiplierB;
+	private: System::Windows::Forms::Button^ btnIntMultiplicationB;
+	private: System::Windows::Forms::TextBox^ txtMultiplierA;
+	private: System::Windows::Forms::Button^ btnIntMultiplicationA;
+	private: System::Windows::Forms::Button^ button1;
+
+
+	private: System::Windows::Forms::TextBox^ txtScProd;
+	private: System::Windows::Forms::Button^ btnVecProd;
+
+	private: System::Windows::Forms::Button^ btnScProd;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -119,6 +130,14 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->lblMatrix1 = (gcnew System::Windows::Forms::Label());
 			this->lblMatrix2 = (gcnew System::Windows::Forms::Label());
 			this->lblResult = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnIntMultiplicationA = (gcnew System::Windows::Forms::Button());
+			this->txtMultiplierA = (gcnew System::Windows::Forms::TextBox());
+			this->txtMultiplierB = (gcnew System::Windows::Forms::TextBox());
+			this->btnIntMultiplicationB = (gcnew System::Windows::Forms::Button());
+			this->btnScProd = (gcnew System::Windows::Forms::Button());
+			this->btnVecProd = (gcnew System::Windows::Forms::Button());
+			this->txtScProd = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Matrix1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Matrix2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->BeginInit();
@@ -261,7 +280,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			// btnAddition
 			// 
 			this->btnAddition->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
-			this->btnAddition->Location = System::Drawing::Point(754, 114);
+			this->btnAddition->Location = System::Drawing::Point(754, 108);
 			this->btnAddition->Name = L"btnAddition";
 			this->btnAddition->Size = System::Drawing::Size(153, 48);
 			this->btnAddition->TabIndex = 25;
@@ -273,7 +292,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			// btnSubtraction
 			// 
 			this->btnSubtraction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
-			this->btnSubtraction->Location = System::Drawing::Point(754, 178);
+			this->btnSubtraction->Location = System::Drawing::Point(754, 162);
 			this->btnSubtraction->Name = L"btnSubtraction";
 			this->btnSubtraction->Size = System::Drawing::Size(153, 48);
 			this->btnSubtraction->TabIndex = 26;
@@ -334,12 +353,105 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->lblResult->TabIndex = 31;
 			this->lblResult->Text = L"Result";
 			this->lblResult->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblResult->Visible = false;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(0, 0);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 32;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// btnIntMultiplicationA
+			// 
+			this->btnIntMultiplicationA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			this->btnIntMultiplicationA->Location = System::Drawing::Point(754, 216);
+			this->btnIntMultiplicationA->Name = L"btnIntMultiplicationA";
+			this->btnIntMultiplicationA->Size = System::Drawing::Size(153, 44);
+			this->btnIntMultiplicationA->TabIndex = 33;
+			this->btnIntMultiplicationA->Text = L"Multiply A by";
+			this->btnIntMultiplicationA->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnIntMultiplicationA->UseVisualStyleBackColor = true;
+			this->btnIntMultiplicationA->Visible = false;
+			this->btnIntMultiplicationA->Click += gcnew System::EventHandler(this, &MyForm::btnIntMultiplicationA_Click);
+			// 
+			// txtMultiplierA
+			// 
+			this->txtMultiplierA->Location = System::Drawing::Point(857, 223);
+			this->txtMultiplierA->Name = L"txtMultiplierA";
+			this->txtMultiplierA->Size = System::Drawing::Size(40, 30);
+			this->txtMultiplierA->TabIndex = 34;
+			this->txtMultiplierA->Visible = false;
+			// 
+			// txtMultiplierB
+			// 
+			this->txtMultiplierB->Location = System::Drawing::Point(857, 273);
+			this->txtMultiplierB->Name = L"txtMultiplierB";
+			this->txtMultiplierB->Size = System::Drawing::Size(40, 30);
+			this->txtMultiplierB->TabIndex = 36;
+			this->txtMultiplierB->Visible = false;
+			// 
+			// btnIntMultiplicationB
+			// 
+			this->btnIntMultiplicationB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			this->btnIntMultiplicationB->Location = System::Drawing::Point(754, 266);
+			this->btnIntMultiplicationB->Name = L"btnIntMultiplicationB";
+			this->btnIntMultiplicationB->Size = System::Drawing::Size(153, 44);
+			this->btnIntMultiplicationB->TabIndex = 35;
+			this->btnIntMultiplicationB->Text = L"Multiply B by";
+			this->btnIntMultiplicationB->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnIntMultiplicationB->UseVisualStyleBackColor = true;
+			this->btnIntMultiplicationB->Visible = false;
+			this->btnIntMultiplicationB->Click += gcnew System::EventHandler(this, &MyForm::btnIntMultiplicationB_Click);
+			// 
+			// btnScProd
+			// 
+			this->btnScProd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			this->btnScProd->Location = System::Drawing::Point(754, 389);
+			this->btnScProd->Name = L"btnScProd";
+			this->btnScProd->Size = System::Drawing::Size(167, 48);
+			this->btnScProd->TabIndex = 37;
+			this->btnScProd->Text = L"Scalar Product A and B";
+			this->btnScProd->UseVisualStyleBackColor = true;
+			this->btnScProd->Visible = false;
+			this->btnScProd->Click += gcnew System::EventHandler(this, &MyForm::btnScProd_Click);
+			// 
+			// btnVecProd
+			// 
+			this->btnVecProd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			this->btnVecProd->Location = System::Drawing::Point(754, 316);
+			this->btnVecProd->Name = L"btnVecProd";
+			this->btnVecProd->Size = System::Drawing::Size(153, 48);
+			this->btnVecProd->TabIndex = 38;
+			this->btnVecProd->Text = L"Vector Product A and B";
+			this->btnVecProd->UseVisualStyleBackColor = true;
+			this->btnVecProd->Visible = false;
+			this->btnVecProd->Click += gcnew System::EventHandler(this, &MyForm::btnVecProd_Click);
+			// 
+			// txtScProd
+			// 
+			this->txtScProd->Location = System::Drawing::Point(927, 396);
+			this->txtScProd->Name = L"txtScProd";
+			this->txtScProd->ReadOnly = true;
+			this->txtScProd->Size = System::Drawing::Size(302, 30);
+			this->txtScProd->TabIndex = 39;
+			this->txtScProd->Visible = false;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1258, 534);
+			this->Controls->Add(this->txtScProd);
+			this->Controls->Add(this->btnVecProd);
+			this->Controls->Add(this->btnScProd);
+			this->Controls->Add(this->txtMultiplierB);
+			this->Controls->Add(this->btnIntMultiplicationB);
+			this->Controls->Add(this->txtMultiplierA);
+			this->Controls->Add(this->btnIntMultiplicationA);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lblResult);
 			this->Controls->Add(this->lblMatrix2);
 			this->Controls->Add(this->lblMatrix1);
@@ -445,13 +557,41 @@ namespace MatrixcalculatorLyuzhinas211 {
 					return false;
 		return true;
 	}
+
+	int vectors_mode() { // define the vector viewing mode
+		/*
+		0 - both vectors are horizontal
+		1 - 1st vector - horizontal, 2nd - vertical
+		2 - 1st vector - vertical, 2nd - horizontal
+		3 - both vectors are vertical
+		-1 - matrix1 and matrix2 aren't both vectors
+		*/
+		if (Matrix1->RowCount == 1 && Matrix1->ColumnCount > 1 && Matrix2->RowCount == 1 && Matrix2->ColumnCount > 1)
+			return 0;
+		if (Matrix1->RowCount == 1 && Matrix1->ColumnCount > 1 && Matrix2->RowCount > 1 && Matrix2->ColumnCount == 1)
+			return 1;
+		if (Matrix1->RowCount > 1 && Matrix1->ColumnCount == 1 && Matrix2->RowCount == 1 && Matrix2->ColumnCount > 1)
+			return 2;
+		if (Matrix1->RowCount > 1 && Matrix1->ColumnCount == 1 && Matrix2->RowCount > 1 && Matrix2->ColumnCount == 1)
+			return 3;
+		return -1;
+	}
+
 	private: System::Void btnCheck_Click(System::Object^ sender, System::EventArgs^ e) { // check input data
 		if (!check_grid(Matrix1)) { errorProvider1->SetError(Matrix1, "There are non-integers in the matrix!"); return; };
 		if (!check_grid(Matrix2)) { errorProvider2->SetError(Matrix2, "There are non-integers in the matrix!"); return; };
 		// if everything is correct, some operations will open
+		if (vectors_mode() != -1) { // if matrix1 and matrix2 are both vectors
+			btnScProd->Visible = true;
+			btnVecProd->Visible = true;
+		}
 		btnMultiplication->Visible = true;
 		btnAddition->Visible = true;
 		btnSubtraction->Visible = true;
+		btnIntMultiplicationA->Visible = true;
+		btnIntMultiplicationB->Visible = true;
+		txtMultiplierA->Visible = true;
+		txtMultiplierB->Visible = true;
 	}
 
 	void create_result(int rows, int cols) { // create result matrix/vector (default zero matrix/vector)
@@ -467,6 +607,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			errorProvider2->SetError(btnMultiplication, "Matrices cannot be multiplied!");
 		else {
 			MatrixResult->Visible = true;
+			lblResult->Visible = true;
 			int iresult = this->Matrix1->RowCount, jresult = this->Matrix2->ColumnCount;
 			create_result(iresult, jresult);
 			for (int i = 0; i < iresult; i++)
@@ -483,6 +624,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			errorProvider2->SetError(btnAddition, "The addition cannot be performed because the number of columns and rows of the two matrices do not match!");
 		else {
 			MatrixResult->Visible = true;
+			lblResult->Visible = true;
 			create_result(Matrix1->RowCount, Matrix1->ColumnCount);
 			for (int i = 0; i < Matrix1->RowCount; i++)
 				for (int j = 0; j < Matrix1->ColumnCount; j++)
@@ -496,10 +638,136 @@ namespace MatrixcalculatorLyuzhinas211 {
 			errorProvider2->SetError(btnAddition, "The subtraction cannot be performed because the number of columns and rows of the two matrices do not match!");
 		else {
 			MatrixResult->Visible = true;
+			lblResult->Visible = true;
 			create_result(Matrix1->RowCount, Matrix1->ColumnCount);
 			for (int i = 0; i < Matrix1->RowCount; i++)
 				for (int j = 0; j < Matrix1->ColumnCount; j++)
 					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value) - Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
+		}
+	}
+
+	// multiply matrix1 by some integer
+	private: System::Void btnIntMultiplicationA_Click(System::Object^ sender, System::EventArgs^ e) {
+		int mult;
+		if (Int32::TryParse(txtMultiplierA->Text, mult)) {
+			MatrixResult->Visible = true;
+			lblResult->Visible = true;
+			create_result(Matrix1->RowCount, Matrix1->ColumnCount);
+			for (int i = 0; i < Matrix1->RowCount; i++)
+				for (int j = 0; j < Matrix1->RowCount; j++)
+					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value) * mult;
+		}
+		else
+			errorProvider2->SetError(btnIntMultiplicationA, "Incorrent input!");
+	}
+	
+	// multiply matrix2 by some integer
+	private: System::Void btnIntMultiplicationB_Click(System::Object^ sender, System::EventArgs^ e) {
+		int mult;
+		if (Int32::TryParse(txtMultiplierB->Text, mult)) {
+			MatrixResult->Visible = true;
+			lblResult->Visible = true;
+			create_result(Matrix2->RowCount, Matrix2->ColumnCount);
+			for (int i = 0; i < Matrix2->RowCount; i++)
+				for (int j = 0; j < Matrix2->RowCount; j++)
+					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value) * mult;
+		}
+		else
+			errorProvider2->SetError(btnIntMultiplicationA, "Incorrent input!");
+	}
+
+	// calculate scalar product of vectors (if matrix1 and matrix2 are vectors only)
+	private: System::Void btnScProd_Click(System::Object^ sender, System::EventArgs^ e) {
+		int mode = vectors_mode(), sc_prod = 0;
+		switch (mode) {
+		case 0:
+			if (Matrix1->ColumnCount != Matrix2->ColumnCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->ColumnCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
+				break;
+			}
+		case 1:
+			if (Matrix1->ColumnCount - 1 != Matrix2->RowCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->ColumnCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
+				break;
+			}
+		case 2:
+			if (Matrix1->RowCount != Matrix2->ColumnCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->RowCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
+				break;
+			}
+		case 3:
+			if (Matrix1->RowCount != Matrix2->RowCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->RowCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
+				break;
+			}
+		default:
+			errorProvider1->SetError(btnScProd, "Mode is undefined!");
+			break;
+		}
+		txtScProd->Text = Convert::ToString(sc_prod);
+	}
+	
+	// calculate vector product of vectors (if matrix1 and matrix2 are vectors only)
+	private: System::Void btnVecProd_Click(System::Object^ sender, System::EventArgs^ e) {
+		int mode = vectors_mode();
+		switch (mode) {
+		case 0:
+			if (Matrix1->ColumnCount != 3 || Matrix2->ColumnCount != 3) {
+				errorProvider1->SetError(btnVecProd, "The vector product cannot be calculated because the dimensions of the vectors are not 3!");
+				break;
+			}
+			else {
+				MatrixResult->Visible = true;
+				lblResult->Visible = true;
+				create_result(1, 3);
+					MatrixResult->Rows[0]->Cells[0]->Value = Convert::ToInt32(Matrix1->Rows[0]->Cells[1]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[2]->Value) - 
+					Convert::ToInt32(Matrix1->Rows[0]->Cells[2]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[1]->Value);
+					MatrixResult->Rows[0]->Cells[1]->Value = Convert::ToInt32(Matrix1->Rows[0]->Cells[2]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[0]->Value) -
+						Convert::ToInt32(Matrix1->Rows[0]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[2]->Value);
+					MatrixResult->Rows[0]->Cells[2]->Value = Convert::ToInt32(Matrix1->Rows[0]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[1]->Value) -
+						Convert::ToInt32(Matrix1->Rows[0]->Cells[1]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[0]->Value);
+				break;
+			}
+		case 3:
+			if (Matrix1->RowCount != 3 || Matrix2->RowCount != 3) {
+				errorProvider1->SetError(btnVecProd, "The vector product cannot be calculated because the dimensions of the vectors are not 3!");
+				break;
+			}
+			else {
+				MatrixResult->Visible = true;
+				lblResult->Visible = true;
+				create_result(3, 1);
+				MatrixResult->Rows[0]->Cells[0]->Value = Convert::ToInt32(Matrix1->Rows[1]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[2]->Cells[0]->Value) -
+					Convert::ToInt32(Matrix1->Rows[2]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[1]->Cells[0]->Value);
+				MatrixResult->Rows[1]->Cells[0]->Value = Convert::ToInt32(Matrix1->Rows[2]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[0]->Value) -
+					Convert::ToInt32(Matrix1->Rows[0]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[2]->Cells[0]->Value);
+				MatrixResult->Rows[2]->Cells[0]->Value = Convert::ToInt32(Matrix1->Rows[0]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[1]->Cells[0]->Value) -
+					Convert::ToInt32(Matrix1->Rows[1]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[0]->Value);
+				break;
+			}
+		default:
+			errorProvider1->SetError(btnScProd, "Vectors are not both vertical or horizontal!");
+			break;
 		}
 	}
 };
