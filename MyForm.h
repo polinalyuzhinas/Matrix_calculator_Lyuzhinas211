@@ -651,7 +651,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 	}
 	private: System::Void btnRemoveColumnMatrix1_Click(System::Object^ sender, System::EventArgs^ e) { // remove highlighted column to first matrix
 		if (Matrix1->RowCount == 0)
-			errorProvider1->SetError(Matrix1, "There are no rows in the matrix yet!");
+			errorProvider1->SetError(Matrix1, "There are no columns in the matrix yet!");
 		else {
 			errorProvider1->Clear();
 			int i = this->Matrix1->CurrentCell->ColumnIndex;
@@ -661,6 +661,8 @@ namespace MatrixcalculatorLyuzhinas211 {
 	private: System::Void btnAddRowMatrix2_Click(System::Object^ sender, System::EventArgs^ e) { // add row to second matrix
 		if (Matrix2->ColumnCount == 0)
 			errorProvider2->SetError(Matrix2, "First, add at least one column!");
+		else if (Matrix2->RowCount == 9)
+			errorProvider2->SetError(Matrix2, "Limit on the number of rows!");
 		else {
 			errorProvider2->Clear();
 			this->Matrix2->Rows->Add(1);
@@ -678,12 +680,16 @@ namespace MatrixcalculatorLyuzhinas211 {
 		}
 	}
 	private: System::Void btnAddColumnMatrix2_Click(System::Object^ sender, System::EventArgs^ e) { // add column to second matrix
-		errorProvider2->Clear();
-		this->Matrix2->Columns->Add("", "");
+		if (Matrix2->ColumnCount == 9)
+			errorProvider2->SetError(Matrix2, "Limit on the number of columns!");
+		else {
+			errorProvider2->Clear();
+			this->Matrix2->Columns->Add("", "");
+		}
 	}
 	private: System::Void btnRemoveColumnMatrix2_Click(System::Object^ sender, System::EventArgs^ e) { // remove highlighted column to second matrix
 		if (Matrix2->RowCount == 0)
-			errorProvider2->SetError(Matrix2, "There are no rows in the matrix yet!");
+			errorProvider2->SetError(Matrix2, "There are no columns in the matrix yet!");
 		else {
 			errorProvider2->Clear();
 			int i = this->Matrix2->CurrentCell->ColumnIndex;
