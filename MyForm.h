@@ -339,6 +339,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			// btnCheck
 			// 
 			this->btnCheck->BackColor = System::Drawing::Color::MintCream;
+			this->btnCheck->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->btnCheck->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
 			this->btnCheck->Location = System::Drawing::Point(184, 481);
 			this->btnCheck->Name = L"btnCheck";
@@ -434,6 +435,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			// 
 			// btnScProd
 			// 
+			this->btnScProd->Enabled = false;
 			this->btnScProd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnScProd->Location = System::Drawing::Point(754, 392);
 			this->btnScProd->Name = L"btnScProd";
@@ -441,11 +443,11 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnScProd->TabIndex = 37;
 			this->btnScProd->Text = L"Scalar Product A and B";
 			this->btnScProd->UseVisualStyleBackColor = true;
-			this->btnScProd->Visible = false;
 			this->btnScProd->Click += gcnew System::EventHandler(this, &MyForm::btnScProd_Click);
 			// 
 			// btnVecProd
 			// 
+			this->btnVecProd->Enabled = false;
 			this->btnVecProd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnVecProd->Location = System::Drawing::Point(754, 316);
 			this->btnVecProd->Name = L"btnVecProd";
@@ -453,17 +455,16 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnVecProd->TabIndex = 38;
 			this->btnVecProd->Text = L"Vector Product A and B";
 			this->btnVecProd->UseVisualStyleBackColor = true;
-			this->btnVecProd->Visible = false;
 			this->btnVecProd->Click += gcnew System::EventHandler(this, &MyForm::btnVecProd_Click);
 			// 
 			// txtScProd
 			// 
+			this->txtScProd->Enabled = false;
 			this->txtScProd->Location = System::Drawing::Point(927, 399);
 			this->txtScProd->Name = L"txtScProd";
 			this->txtScProd->ReadOnly = true;
 			this->txtScProd->Size = System::Drawing::Size(302, 30);
 			this->txtScProd->TabIndex = 39;
-			this->txtScProd->Visible = false;
 			// 
 			// btnTransposeB
 			// 
@@ -479,6 +480,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			// 
 			// btnDetA
 			// 
+			this->btnDetA->Enabled = false;
 			this->btnDetA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnDetA->Location = System::Drawing::Point(754, 455);
 			this->btnDetA->Name = L"btnDetA";
@@ -486,11 +488,11 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnDetA->TabIndex = 41;
 			this->btnDetA->Text = L"Determinant A";
 			this->btnDetA->UseVisualStyleBackColor = true;
-			this->btnDetA->Visible = false;
 			this->btnDetA->Click += gcnew System::EventHandler(this, &MyForm::btnDetA_Click_1);
 			// 
 			// btnDetB
 			// 
+			this->btnDetB->Enabled = false;
 			this->btnDetB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnDetB->Location = System::Drawing::Point(754, 498);
 			this->btnDetB->Name = L"btnDetB";
@@ -498,29 +500,29 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnDetB->TabIndex = 42;
 			this->btnDetB->Text = L"Determinant B";
 			this->btnDetB->UseVisualStyleBackColor = true;
-			this->btnDetB->Visible = false;
 			this->btnDetB->Click += gcnew System::EventHandler(this, &MyForm::btnDetB_Click);
 			// 
 			// txtDetB
 			// 
+			this->txtDetB->Enabled = false;
 			this->txtDetB->Location = System::Drawing::Point(927, 499);
 			this->txtDetB->Name = L"txtDetB";
 			this->txtDetB->ReadOnly = true;
 			this->txtDetB->Size = System::Drawing::Size(302, 30);
 			this->txtDetB->TabIndex = 43;
-			this->txtDetB->Visible = false;
 			// 
 			// txtDetA
 			// 
+			this->txtDetA->Enabled = false;
 			this->txtDetA->Location = System::Drawing::Point(927, 456);
 			this->txtDetA->Name = L"txtDetA";
 			this->txtDetA->ReadOnly = true;
 			this->txtDetA->Size = System::Drawing::Size(302, 30);
 			this->txtDetA->TabIndex = 44;
-			this->txtDetA->Visible = false;
 			// 
 			// btnRankA
 			// 
+			this->btnRankA->Enabled = false;
 			this->btnRankA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnRankA->Location = System::Drawing::Point(754, 540);
 			this->btnRankA->Name = L"btnRankA";
@@ -528,11 +530,11 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnRankA->TabIndex = 45;
 			this->btnRankA->Text = L"Rank A";
 			this->btnRankA->UseVisualStyleBackColor = true;
-			this->btnRankA->Visible = false;
 			this->btnRankA->Click += gcnew System::EventHandler(this, &MyForm::btnRankA_Click);
 			// 
 			// btnRankB
 			// 
+			this->btnRankB->Enabled = false;
 			this->btnRankB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
 			this->btnRankB->Location = System::Drawing::Point(754, 582);
 			this->btnRankB->Name = L"btnRankB";
@@ -540,26 +542,25 @@ namespace MatrixcalculatorLyuzhinas211 {
 			this->btnRankB->TabIndex = 46;
 			this->btnRankB->Text = L"Rank B";
 			this->btnRankB->UseVisualStyleBackColor = true;
-			this->btnRankB->Visible = false;
 			this->btnRankB->Click += gcnew System::EventHandler(this, &MyForm::btnRankB_Click_1);
 			// 
 			// txtRankA
 			// 
+			this->txtRankA->Enabled = false;
 			this->txtRankA->Location = System::Drawing::Point(927, 541);
 			this->txtRankA->Name = L"txtRankA";
 			this->txtRankA->ReadOnly = true;
 			this->txtRankA->Size = System::Drawing::Size(302, 30);
 			this->txtRankA->TabIndex = 47;
-			this->txtRankA->Visible = false;
 			// 
 			// txtRankB
 			// 
+			this->txtRankB->Enabled = false;
 			this->txtRankB->Location = System::Drawing::Point(927, 583);
 			this->txtRankB->Name = L"txtRankB";
 			this->txtRankB->ReadOnly = true;
 			this->txtRankB->Size = System::Drawing::Size(302, 30);
 			this->txtRankB->TabIndex = 48;
-			this->txtRankB->Visible = false;
 			// 
 			// MyForm
 			// 
@@ -691,15 +692,16 @@ namespace MatrixcalculatorLyuzhinas211 {
 	}
 
 	// functions for the work with input data
-	bool check_grid(DataGridView^ g) { // check valid data in the DataGridView object
+	int check_grid(DataGridView^ g) { // check valid data in the DataGridView object
 		int n;
-		if (g->RowCount == 0) // if matrix is empty
-			return false;
 		for (int i = 0; i < g->RowCount; i++)
-			for (int j = 0; j < g->ColumnCount; j++)
+			for (int j = 0; j < g->ColumnCount; j++) {
 				if (!Int32::TryParse(System::Convert::ToString(g->Rows[i]->Cells[j]->Value), n))
-					return false;
-		return true;
+					return 0;
+				if (n > 1000 || n < -1000)
+					return -1;
+			}
+		return 1;
 	}
 
 	void clear_matrix(DataGridView^ g) {
@@ -726,17 +728,14 @@ namespace MatrixcalculatorLyuzhinas211 {
 		return -1;
 	}
 
-	void clear() {
-			txtDetA->Clear();
-			btnDetA->Visible = false;
-			txtDetA->Visible = false;
-			txtDetB->Clear();
-			btnDetB->Visible = false;
-			txtDetB->Visible = false;
-			txtScProd->Clear();
-			btnScProd->Visible = false;
-			txtScProd->Visible = false;
-			btnVecProd->Visible = false;
+	void block() {
+		btnDetA->Enabled = false;
+		txtDetA->Enabled = false;
+		btnDetB->Enabled = false;
+		txtDetB->Enabled = false;
+		btnScProd->Enabled = false;
+		txtScProd->Enabled = false;
+		btnVecProd->Enabled = false;
 		btnTransposeA->Enabled = false;
 		btnTransposeB->Enabled = false;
 		btnMultiplication->Enabled = false;
@@ -746,14 +745,10 @@ namespace MatrixcalculatorLyuzhinas211 {
 		btnIntMultiplicationB->Enabled = false;
 		txtMultiplierA->Enabled = false;
 		txtMultiplierB->Enabled = false;
-		txtMultiplierA->Clear();
-		txtMultiplierB->Clear();
-		btnRankA->Visible = false;
-		txtRankA->Visible = false;
-		btnRankB->Visible = false;
-		txtRankB->Visible = false;
-		txtRankA->Clear();
-		txtRankB->Clear();
+		btnRankA->Enabled = false;
+		txtRankA->Enabled = false;
+		btnRankB->Enabled = false;
+		txtRankB->Enabled = false;
 
 	}
 	private: System::Void btnCheck_Click(System::Object^ sender, System::EventArgs^ e) { // check input data
@@ -762,38 +757,69 @@ namespace MatrixcalculatorLyuzhinas211 {
 		clear_matrix(MatrixResult);
 		if (!check_grid(Matrix1)) errorProvider1->SetError(Matrix1, "There are non-integers in the matrix or matrix is empty!");
 		if (!check_grid(Matrix2)) errorProvider2->SetError(Matrix2, "There are non-integers in the matrix or matrix is empty!");
-		if (check_grid(Matrix1) && check_grid(Matrix2)) {
-			// if everything is correct, basic operations will enable and special operations will open
+		if (check_grid(Matrix1) == -1) errorProvider1->SetError(Matrix1, "There are too big or too small integers (> 1000 or < -1000) in the matrix!");
+		if (check_grid(Matrix2) == -1) errorProvider2->SetError(Matrix2, "There are too big or too small integers (> 1000 or < -1000) in the matrix!");
+		if (check_grid(Matrix1) == 1 && check_grid(Matrix2) == 1) {
+			// if everything is correct, operations will be enable
+			if (Matrix1->RowCount == 0 && Matrix2->RowCount > 0) { // if matrix1 is empty, operations with two matrices will be disable
+				btnTransposeB->Enabled = true;
+				btnIntMultiplicationB->Enabled = true;
+				txtMultiplierB->Enabled = true;
+				txtMultiplierB->Clear();
+				txtDetB->Clear();
+				txtRankB->Clear();
+			}
+			if (Matrix2->RowCount == 0 && Matrix1->RowCount > 0) { // if matrix2 is empty, operations with two matrices will be disable
+				btnTransposeA->Enabled = true;
+				btnIntMultiplicationA->Enabled = true;
+				txtMultiplierA->Enabled = true;
+				txtMultiplierA->Clear();
+				txtDetA->Clear();
+				txtRankA->Clear();
+			}
+			if (Matrix1->RowCount == 0 && Matrix2->RowCount == 0) { // if both matrices are empty
+				errorProvider1->SetError(btnCheck, "Matrices are empty!");
+				return;
+			}
+			if (Matrix1->RowCount > 0 && Matrix2->RowCount > 0) { // if both matrices is not empty
+				btnMultiplication->Enabled = true;
+				btnAddition->Enabled = true;
+				btnSubtraction->Enabled = true;
+				btnTransposeA->Enabled = true;
+				btnIntMultiplicationA->Enabled = true;
+				txtMultiplierA->Enabled = true;
+				txtMultiplierA->Clear();
+				txtDetA->Clear();
+				txtRankA->Clear();
+				btnTransposeB->Enabled = true;
+				btnIntMultiplicationB->Enabled = true;
+				txtMultiplierB->Enabled = true;
+				txtMultiplierB->Clear();
+				txtDetB->Clear();
+				txtRankB->Clear();
+			}
 			if (vectors_mode() != -1) { // if matrix1 and matrix2 are both vectors
-				btnScProd->Visible = true;
-				txtScProd->Visible = true;
-				btnVecProd->Visible = true;
+				btnScProd->Enabled = true;
+				txtScProd->Enabled = true;
+				btnVecProd->Enabled = true;
+				txtScProd->Clear();
 			}
 			if (Matrix1->RowCount == Matrix1->ColumnCount && Matrix1->RowCount > 0 && Matrix1->ColumnCount > 0) { // if Matrix1 is square matrix
-				btnDetA->Visible = true;
-				txtDetA->Visible = true;
+				btnDetA->Enabled = true;
+				txtDetA->Enabled = true;
 			}
 			if (Matrix2->RowCount == Matrix2->ColumnCount && Matrix2->RowCount > 0 && Matrix2->ColumnCount > 0) { // if Matrix2 is square matrix
-				btnDetB->Visible = true;
-				txtDetB->Visible = true;
+				btnDetB->Enabled = true;
+				txtDetB->Enabled = true;
 			}
 			if (Matrix1->RowCount > 0 && Matrix1->ColumnCount > 0) { // if Matrix1 is not empty
-				btnRankA->Visible = true;
-				txtRankA->Visible = true;
+				btnRankA->Enabled = true;
+				txtRankA->Enabled = true;
 			}
-			if (Matrix2->RowCount > 0 && Matrix2->ColumnCount > 0) { // if Matrix1 is not empty
-				btnRankB->Visible = true;
-				txtRankB->Visible = true;
+			if (Matrix2->RowCount > 0 && Matrix2->ColumnCount > 0) { // if Matrix2 is not empty
+				btnRankB->Enabled = true;
+				txtRankB->Enabled = true;
 			}
-			btnTransposeA->Enabled = true;
-			btnTransposeB->Enabled = true;
-			btnMultiplication->Enabled = true;
-			btnAddition->Enabled = true;
-			btnSubtraction->Enabled = true;
-			btnIntMultiplicationA->Enabled = true;
-			btnIntMultiplicationB->Enabled = true;
-			txtMultiplierA->Enabled = true;
-			txtMultiplierB->Enabled = true;
 		}
 	}
 
@@ -819,7 +845,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 		
 						Convert::ToInt32(Matrix1->Rows[i]->Cells[k]->Value) * Convert::ToInt32(Matrix2->Rows[k]->Cells[j]->Value);
 		}
-		clear();
+		block();
 	}
 
 	// addition of 2 elements (2 matrices or 2 vectors)
@@ -833,13 +859,13 @@ namespace MatrixcalculatorLyuzhinas211 {
 				for (int j = 0; j < Matrix1->ColumnCount; j++)
 					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value) + Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
 		}
-		clear();
+		block();
 	}
 
 	// subtraction of 2 elements (2 matrices or 2 vectors)
 	private: System::Void btnSubtraction_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		if (Matrix1->RowCount != Matrix2->RowCount || Matrix1->ColumnCount != Matrix2->ColumnCount)
-			errorProvider2->SetError(btnAddition, "The subtraction cannot be performed because the number of columns and rows of the two matrices do not match!");
+			errorProvider2->SetError(btnSubtraction, "The subtraction cannot be performed because the number of columns and rows of the two matrices do not match!");
 		else {
 			clear_matrix(MatrixResult);
 			create_result(Matrix1->RowCount, Matrix1->ColumnCount);
@@ -847,103 +873,94 @@ namespace MatrixcalculatorLyuzhinas211 {
 				for (int j = 0; j < Matrix1->ColumnCount; j++)
 					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value) - Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
 		}
-		clear();
+		block();
 	}
 
 	// multiply matrix1 by some integer
 	private: System::Void btnIntMultiplicationA_Click(System::Object^ sender, System::EventArgs^ e) {
 		int mult;
 		if (Int32::TryParse(txtMultiplierA->Text, mult)) {
+			errorProvider1->Clear();
 			clear_matrix(MatrixResult);
 			create_result(Matrix1->RowCount, Matrix1->ColumnCount);
 			for (int i = 0; i < Matrix1->RowCount; i++)
-				for (int j = 0; j < Matrix1->RowCount; j++)
+				for (int j = 0; j < Matrix1->ColumnCount; j++)
 					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value) * mult;
+			block();
 		}
 		else
-			errorProvider2->SetError(btnIntMultiplicationA, "Incorrent input!");
-		clear();
+			errorProvider1->SetError(btnIntMultiplicationA, "Incorrent input!");
 	}
 
 	// multiply matrix2 by some integer
 	private: System::Void btnIntMultiplicationB_Click(System::Object^ sender, System::EventArgs^ e) {
 		int mult;
 		if (Int32::TryParse(txtMultiplierB->Text, mult)) {
+			errorProvider2->Clear();
 			clear_matrix(MatrixResult);
 			create_result(Matrix2->RowCount, Matrix2->ColumnCount);
 			for (int i = 0; i < Matrix2->RowCount; i++)
-				for (int j = 0; j < Matrix2->RowCount; j++)
+				for (int j = 0; j < Matrix2->ColumnCount; j++)
 					MatrixResult->Rows[i]->Cells[j]->Value = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value) * mult;
+			block();
 		}
 		else
 			errorProvider2->SetError(btnIntMultiplicationA, "Incorrent input!");
-		clear();
 	}
 
 	// calculate scalar product of vectors (if matrix1 and matrix2 are vectors only)
 	private: System::Void btnScProd_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (check_grid(Matrix1) && check_grid(Matrix2)) {
-			errorProvider1->Clear();
-			errorProvider2->Clear();
-			txtScProd->Clear();
-			int mode = vectors_mode(), sc_prod = 0;
-			switch (mode) {
-			case 0:
-				if (Matrix1->ColumnCount != Matrix2->ColumnCount) {
-					errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
-					break;
-				}
-				else {
-					for (int i = 0; i < Matrix1->ColumnCount; i++)
-						sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
-					break;
-				}
-			case 1:
-				if (Matrix1->ColumnCount != Matrix2->RowCount) {
-					errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
-					break;
-				}
-				else {
-					for (int i = 0; i < Matrix1->ColumnCount; i++)
-						sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
-					break;
-				}
-			case 2:
-				if (Matrix1->RowCount != Matrix2->ColumnCount) {
-					errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
-					break;
-				}
-				else {
-					for (int i = 0; i < Matrix1->RowCount; i++)
-						sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
-					break;
-				}
-			case 3:
-				if (Matrix1->RowCount != Matrix2->RowCount) {
-					errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
-					break;
-				}
-				else {
-					for (int i = 0; i < Matrix1->RowCount; i++)
-						sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
-					break;
-				}
-			default:
-				errorProvider1->SetError(btnScProd, "Mode is undefined!");
+		errorProvider1->Clear();
+		errorProvider2->Clear();
+		txtScProd->Clear();
+		int mode = vectors_mode(), sc_prod = 0;
+		switch (mode) {
+		case 0:
+			if (Matrix1->ColumnCount != Matrix2->ColumnCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
 				break;
 			}
-			txtScProd->Text = Convert::ToString(sc_prod);
+			else {
+				for (int i = 0; i < Matrix1->ColumnCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
+				break;
+			}
+		case 1:
+			if (Matrix1->ColumnCount != Matrix2->RowCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->ColumnCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[0]->Cells[i]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
+				break;
+			}
+		case 2:
+			if (Matrix1->RowCount != Matrix2->ColumnCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->RowCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[0]->Cells[i]->Value);
+				break;
+			}
+		case 3:
+			if (Matrix1->RowCount != Matrix2->RowCount) {
+				errorProvider1->SetError(btnScProd, "The scalar product cannot be calculated because the dimensions of the vectors are not equal!");
+				break;
+			}
+			else {
+				for (int i = 0; i < Matrix1->RowCount; i++)
+					sc_prod += Convert::ToInt32(Matrix1->Rows[i]->Cells[0]->Value) * Convert::ToInt32(Matrix2->Rows[i]->Cells[0]->Value);
+				break;
+			}
+		default:
+			errorProvider1->SetError(btnScProd, "Mode is undefined!");
+			break;
 		}
-		else if (!check_grid(Matrix1)) {
-			errorProvider1->SetError(Matrix1, "There are non-integers in the matrix!");
-			txtScProd->Clear();
-			return;
-		}
-		else {
-			errorProvider2->SetError(Matrix2, "There are non-integers in the matrix!");
-			txtScProd->Clear();
-			return;
-		}
+		txtScProd->Text = Convert::ToString(sc_prod);
+		block();
 	}
 
 	// calculate vector product of vectors (if matrix1 and matrix2 are vectors only)
@@ -982,10 +999,10 @@ namespace MatrixcalculatorLyuzhinas211 {
 				break;
 			}
 		default:
-			errorProvider1->SetError(btnScProd, "Vectors are not both vertical or horizontal!");
+			errorProvider1->SetError(btnVecProd, "Vectors are not both vertical or horizontal!");
 			break;
 		}
-		clear();
+		block();
 	}
 
 	void transpose_matrix(DataGridView^ g) { // transpose matrix g
@@ -999,7 +1016,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 		clear_matrix(MatrixResult);
 		create_result(Matrix1->ColumnCount, Matrix1->RowCount);
 		transpose_matrix(Matrix1);
-		clear();
+		block();
 	}
 
 	// transposing the matrix2
@@ -1007,7 +1024,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 		clear_matrix(MatrixResult);
 		create_result(Matrix2->ColumnCount, Matrix2->RowCount);
 		transpose_matrix(Matrix2);
-		clear();
+		block();
 	}
 
 	void getMatrixWithoutRowAndCol(int** matrix, int size, int row, int col, int** newMatrix) {
@@ -1067,51 +1084,41 @@ namespace MatrixcalculatorLyuzhinas211 {
 
 	// calculate determinant of matrix1
 	private: System::Void btnDetA_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		if (check_grid(Matrix1)) {
+		try {
 			errorProvider1->Clear();
 			txtDetA->Clear();
-			if (Matrix1->RowCount == Matrix1->ColumnCount && Matrix1->RowCount > 0 && Matrix1->ColumnCount > 0) {
-				// copy data in Matrix1 to array temp
-				int** temp = new int* [Matrix1->RowCount];
-				for (int i = 0; i < Matrix1->RowCount; i++)
-					temp[i] = new int[Matrix1->RowCount];
-				for (int i = 0; i < Matrix1->RowCount; i++)
-					for (int j = 0; j < Matrix1->ColumnCount; j++)
-						temp[i][j] = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value);
-				txtDetA->Text = Convert::ToString(determinant(temp, Matrix1->RowCount));
-			}
-			else 
-				errorProvider1->SetError(Matrix1, "This is not square matrix!");
+			// copy data in Matrix1 to array temp
+			int** temp = new int* [Matrix1->RowCount];
+			for (int i = 0; i < Matrix1->RowCount; i++)
+				temp[i] = new int[Matrix1->RowCount];
+			for (int i = 0; i < Matrix1->RowCount; i++)
+				for (int j = 0; j < Matrix1->ColumnCount; j++)
+					temp[i][j] = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value);
+			txtDetA->Text = Convert::ToString(determinant(temp, Matrix1->RowCount));
+			block();
 		}
-		else {
-			errorProvider1->SetError(Matrix1, "There are non-integers in the matrix!");
-			txtDetA->Clear();
-			return;
+		catch (OverflowException^ e) {
+			errorProvider1->SetError(btnDetA, "An overflow has occurred!");
 		}
 	}
 
 	// calculate determinant of matrix2
-	private: System::Void btnDetB_Click(System::Object^ sender, System::EventArgs^ e) { 
-		if (check_grid(Matrix2)) {
+	private: System::Void btnDetB_Click(System::Object^ sender, System::EventArgs^ e) {
+		try {
 			errorProvider2->Clear();
 			txtDetB->Clear();
-			if (Matrix2->RowCount == Matrix2->ColumnCount && Matrix2->RowCount > 0 && Matrix2->ColumnCount > 0) {
-				// copy data in Matrix2 to array temp
-				int** temp = new int* [Matrix2->RowCount];
-				for (int i = 0; i < Matrix2->RowCount; i++)
-					temp[i] = new int[Matrix2->RowCount];
-				for (int i = 0; i < Matrix2->RowCount; i++)
-					for (int j = 0; j < Matrix2->ColumnCount; j++)
-						temp[i][j] = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
-				txtDetB->Text = Convert::ToString(determinant(temp, Matrix2->RowCount));
-			}
-			else
-				errorProvider2->SetError(Matrix2, "This is not square matrix!");
+			// copy data in Matrix2 to array temp
+			int** temp = new int* [Matrix2->RowCount];
+			for (int i = 0; i < Matrix2->RowCount; i++)
+				temp[i] = new int[Matrix2->RowCount];
+			for (int i = 0; i < Matrix2->RowCount; i++)
+				for (int j = 0; j < Matrix2->ColumnCount; j++)
+					temp[i][j] = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
+			txtDetB->Text = Convert::ToString(determinant(temp, Matrix2->RowCount));
+			block();
 		}
-		else {
-		errorProvider2->SetError(Matrix2, "There are non-integers in the matrix!");
-		txtDetB->Clear();
-		return;
+		catch (OverflowException^ e) {
+			errorProvider2->SetError(btnDetB, "An overflow has occurred!");
 		}
 	}
 		   
@@ -1130,8 +1137,8 @@ namespace MatrixcalculatorLyuzhinas211 {
 	// function for finding rank of matrix
 	int rank(int** matrix, int crows, int ccols)
 	{
-		int rank = crows;
-		int matrix_rows = ccols;
+		int rank = ccols;
+		int matrix_rows = crows;
 		for (int row = 0; row < rank; row++) {
 			// diagonal element is not zero
 			if (matrix[row][row]) {
@@ -1140,6 +1147,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 						// make all elements of current column as 0 except matrix[row][row]
 						double mult = (double)matrix[col][row] /
 							matrix[row][row];
+						if (!matrix[row][row]) { throw 0; break; }
 						for (int i = 0; i < rank; i++)
 							matrix[col][i] -= mult * matrix[row][i];
 					}
@@ -1149,7 +1157,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 			else {
 				bool reduce = true;
 				// find the non-zero element in current column 
-				for (int i = row + 1; i < sizeof matrix / sizeof matrix[0]; i++) {
+				for (int i = row + 1; i < matrix_rows; i++) {
 					// swap the row with non-zero element with current row
 					if (matrix[i][row]) {
 						swap(matrix, row, i, rank);
@@ -1162,7 +1170,7 @@ namespace MatrixcalculatorLyuzhinas211 {
 					// reduce number of columns
 					rank--;
 					// copy the last column
-					for (int i = 0; i < sizeof matrix / sizeof matrix[0]; i++)
+					for (int i = 0; i < matrix_rows; i++)
 						matrix[i][row] = matrix[i][rank];
 				}
 				// process this row again
@@ -1174,53 +1182,47 @@ namespace MatrixcalculatorLyuzhinas211 {
 
 	// calculate rank of matrix1
 	private: System::Void btnRankA_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (check_grid(Matrix1)) {
+		try {
 			errorProvider1->Clear();
 			txtRankA->Clear();
-			if (Matrix1->RowCount > 0 && Matrix1->ColumnCount > 0) {
-				// copy data in Matrix1 to array temp
-				int** temp = new int* [Matrix1->RowCount];
-				for (int i = 0; i < Matrix1->ColumnCount; i++)
-					temp[i] = new int[Matrix1->ColumnCount];
-				for (int i = 0; i < Matrix1->RowCount; i++)
-					for (int j = 0; j < Matrix1->ColumnCount; j++)
-						temp[i][j] = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value);
-				txtRankA->Text = Convert::ToString(rank(temp, Matrix1->RowCount, Matrix1->ColumnCount));
-			}
-			else {
-				errorProvider1->SetError(Matrix1, "This is empty matrix!");
-			}
+			// copy data in Matrix1 to array temp
+			int** temp = new int* [Matrix1->ColumnCount];
+			for (int i = 0; i < Matrix1->RowCount; i++)
+				temp[i] = new int[Matrix1->ColumnCount];
+			for (int i = 0; i < Matrix1->RowCount; i++)
+				for (int j = 0; j < Matrix1->ColumnCount; j++)
+					temp[i][j] = Convert::ToInt32(Matrix1->Rows[i]->Cells[j]->Value);
+			txtRankA->Text = Convert::ToString(rank(temp, Matrix1->RowCount, Matrix1->ColumnCount));
+			block();
 		}
-		else {
-			errorProvider1->SetError(Matrix1, "There are non-integers in the matrix!"); 
-			txtRankA->Clear();
-			return;
+		catch (OverflowException^ e) {
+			errorProvider1->SetError(btnRankA, "An overflow has occurred!");
+		}
+		catch (int) {
+			errorProvider1->SetError(btnRankA, "Divide by zero has occurred!");
 		}
 	}
 
 	// calculate rank of matrix2
 	private: System::Void btnRankB_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		if (check_grid(Matrix2)) {
+		try {
 			errorProvider2->Clear();
 			txtRankB->Clear();
-			if (Matrix2->RowCount > 0 && Matrix2->ColumnCount > 0) {
-				// copy data in Matrix2 to array temp
-				int** temp = new int* [Matrix2->RowCount];
-				for (int i = 0; i < Matrix2->ColumnCount; i++)
-					temp[i] = new int[Matrix2->ColumnCount];
-				for (int i = 0; i < Matrix2->RowCount; i++)
-					for (int j = 0; j < Matrix2->ColumnCount; j++)
-						temp[i][j] = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
-				txtRankB->Text = Convert::ToString(rank(temp, Matrix2->RowCount, Matrix2->ColumnCount));
-			}
-			else {
-				errorProvider2->SetError(Matrix2, "This is empty matrix!");
-			}
+			// copy data in Matrix2 to array temp
+			int** temp = new int* [Matrix2->ColumnCount];
+			for (int i = 0; i < Matrix2->RowCount; i++)
+				temp[i] = new int[Matrix2->ColumnCount];
+			for (int i = 0; i < Matrix2->RowCount; i++)
+				for (int j = 0; j < Matrix2->ColumnCount; j++)
+					temp[i][j] = Convert::ToInt32(Matrix2->Rows[i]->Cells[j]->Value);
+			txtRankB->Text = Convert::ToString(rank(temp, Matrix2->RowCount, Matrix2->ColumnCount));
+			block();
 		}
-		else {
-			errorProvider2->SetError(Matrix2, "There are non-integers in the matrix!");
-			txtRankB->Clear();
-			return;
+		catch (OverflowException^ e) {
+			errorProvider1->SetError(btnRankB, "An overflow has occurred!");
+		}
+		catch (int) {
+			errorProvider1->SetError(btnRankB, "Divide by zero has occurred!");
 		}
 	}
 };
