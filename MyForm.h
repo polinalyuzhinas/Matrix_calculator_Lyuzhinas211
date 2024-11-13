@@ -761,8 +761,8 @@ namespace MatrixcalculatorLyuzhinas211 {
 		errorProvider1->Clear();
 		errorProvider2->Clear();
 		clear_matrix(MatrixResult);
-		if (!check_grid(Matrix1)) errorProvider1->SetError(Matrix1, "There are non-integers in the matrix or matrix is empty!");
-		if (!check_grid(Matrix2)) errorProvider2->SetError(Matrix2, "There are non-integers in the matrix or matrix is empty!");
+		if (!check_grid(Matrix1)) errorProvider1->SetError(Matrix1, "There are non-integers in the matrix!");
+		if (!check_grid(Matrix2)) errorProvider2->SetError(Matrix2, "There are non-integers in the matrix!");
 		if (check_grid(Matrix1) == -1) errorProvider1->SetError(Matrix1, "There are too big or too small integers (> 1000 or < -1000) in the matrix!");
 		if (check_grid(Matrix2) == -1) errorProvider2->SetError(Matrix2, "There are too big or too small integers (> 1000 or < -1000) in the matrix!");
 		if (check_grid(Matrix1) == 1 && check_grid(Matrix2) == 1) {
